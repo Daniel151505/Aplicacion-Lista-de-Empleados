@@ -16,6 +16,7 @@ export class EmpleadoListaComponent implements OnInit {
     { legajo: 5, nombre: 'Maria', apellido: 'Navarro', sexo: 'Femenino', salario: 80000 },
   ]
 
+  radioButtonSeleccionado = 'Todos'
   constructor() { }
 
   ngOnInit(): void {
