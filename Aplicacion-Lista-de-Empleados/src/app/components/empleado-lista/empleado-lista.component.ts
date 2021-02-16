@@ -29,7 +29,9 @@ export class EmpleadoListaComponent implements OnInit {
     return this.listaEmpleados.filter( list => list.sexo === 'Femenino').length
   }
 
-    
+  obtenerTotalMasculino(): number{
+    return this.listaEmpleados.filter( list => list.sexo === 'Masculino').length
+  } 
 
   }
 
