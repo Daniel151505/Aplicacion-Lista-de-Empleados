@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NumeroEmpleadoComponent implements OnInit {
 
+  
+  radioButtonSeleccionado = 'Todos'
+
   constructor() { }
 
   ngOnInit(): void {
