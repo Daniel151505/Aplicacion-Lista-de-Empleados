@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmpleadoListaComponent } from './components/empleado-lista/empleado-lista.component';
+import { NumeroEmpleadoComponent } from './components/empleado-lista/numero-empleado/numero-empleado.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmpleadoListaComponent
+    EmpleadoListaComponent,
+    NumeroEmpleadoComponent
   ],
   imports: [
     BrowserModule,
