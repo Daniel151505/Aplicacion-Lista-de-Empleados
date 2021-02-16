@@ -4,7 +4,7 @@
             <div class="form-check form-check-inline">
                 <input class="form-check-input" [(ngModel)]="radioButtonSeleccionado"
                 type="radio" name="sexo" id="inlineRadio1" value="Todos">
-                <label class="form-check-label" for="inlineRadio1">Todos({{obtenerTotalEmpleados()}})</label>
+                <label class="form-check-label" for="inlineRadio1">Todos( {{obtenerTotalEmpleados()}} )</label>
               </div>
               <div class="form-check form-check-inline">
                 <input class="form-check-input" [(ngModel)]="radioButtonSeleccionado"
@@ -31,13 +31,15 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let empleado of listaEmpleados" >
-                    <td> {{empleado.legajo}} </td>
-                    <td> {{empleado.nombre}} </td>
-                    <td> {{empleado.apellido}} </td>
-                    <td> {{empleado.sexo}} </td>
-                    <td> {{empleado.salario | currency}} </td>
-                  </tr>
+                    <ng-container *ngFor="let empleado of listaEmpleados">
+                        <tr *ngIf="radioButtonSeleccionado == 'Todos' || radioButtonSeleccionado == empleado.sexo  ">
+                            <td> {{empleado.legajo}} </td>
+                            <td> {{empleado.nombre}} </td>
+                            <td> {{empleado.apellido}} </td>
+                            <td> {{empleado.sexo}} </td>
+                            <td> {{empleado.salario | currency}} </td>
+                         </tr>
+                    </ng-container>         
                 </tbody>
               </table>
         </div>
