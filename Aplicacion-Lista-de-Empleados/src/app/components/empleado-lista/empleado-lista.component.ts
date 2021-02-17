@@ -34,5 +34,9 @@ export class EmpleadoListaComponent implements OnInit {
     return this.listaEmpleados.filter( list => list.sexo === 'Masculino').length
   } 
 
+  empleadoCountRadioButtonChange(radioButtonSelec : string): void{
+    this.radioButtonSeleccionado = radioButtonSelec
+  }
+
   }
 
